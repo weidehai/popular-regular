@@ -1,0 +1,17 @@
+{
+  "name": "popular-regular",
+  "version": "1.0.0",
+  "description": "some common use regular expression",
+  "main": "index.js",
+  "author": "wone",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^27.0.4"
+  },
+  "scripts": {
+    "test":"",
+    "build":"",
+    "publish":"",
+    "sync:github":"git add -A && git commit && git push -u origin master"
+  }
+}
