@@ -6,12 +6,13 @@
   "author": "wone",
   "license": "MIT",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.14.5",
     "jest": "^27.0.4"
   },
   "scripts": {
-    "test":"",
-    "build":"",
-    "publish":"",
-    "sync:github":"git add -A && git commit && git push -u origin master"
+    "test": "jest",
+    "build": "",
+    "publish": "",
+    "sync:github": "git add -A && git commit && git push -u origin master"
   }
 }
