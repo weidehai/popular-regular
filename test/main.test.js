@@ -10,7 +10,7 @@ import {
 
 
 test('pureNumber', () => {
-  expect(new RegExp(pureNumber).test('123')).toBe(true);
+  expect(new RegExp(pureNumber).test('====')).toBe(true);
 });
 
 test('pureFloat', () => {
