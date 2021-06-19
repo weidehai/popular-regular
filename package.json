@@ -1,17 +1,25 @@
 {
   "name": "popular-regular",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "some common use regular expression",
-  "main": "index.js",
+  "main": "dist/popularRegular",
   "author": "wone",
   "license": "MIT",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.14.5",
-    "jest": "^27.0.4"
+    "jest": "^27.0.4",
+    "rollup": "^2.52.1"
   },
+  "files": [
+    "src",
+    "dist/*.js"
+  ],
+  "keywords": [
+    "regular expression"
+  ],
   "scripts": {
     "test": "jest",
-    "build": "",
+    "build": "yarn test && rollup --config",
     "publish": "",
     "sync:github": "git add -A && git commit && git push -u origin master"
   }
