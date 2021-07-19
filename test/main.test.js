@@ -6,6 +6,7 @@ import {
   leftParentheses,
   rightParentheses,
   whiteSpace,
+  chinese
 } from '../src/popularRegular'
 
 
@@ -44,6 +45,14 @@ test('rightParentheses', () => {
 
 test('whiteSpace', () => {
   expect(new RegExp(whiteSpace).test('   123')).toBe(true);
+});
+
+test('chinese', () => {
+  expect(new RegExp(chinese).test('撒大苏打')).toBe(true);
+});
+
+test('chinese', () => {
+  expect(new RegExp(chinese).test('123 ')).toBe(false);
 });
 
 

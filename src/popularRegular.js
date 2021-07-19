@@ -5,6 +5,7 @@ const signNumber = "[+-]+\\d+";
 const leftParentheses = "\\(";
 const rightParentheses = "\\)";
 const whiteSpace = "\\s";
+const chinese = "[^\\u0000-\\u00FF]"
 
 export {
   pureNumber,
@@ -14,4 +15,5 @@ export {
   leftParentheses,
   rightParentheses,
   whiteSpace,
+  chinese
 };
