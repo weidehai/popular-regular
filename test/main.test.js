@@ -6,7 +6,8 @@ import {
   leftParentheses,
   rightParentheses,
   whiteSpace,
-  chinese
+  chinese,
+  phoneNumber
 } from '../src/popularRegular'
 
 
@@ -53,6 +54,25 @@ test('chinese', () => {
 
 test('chinese', () => {
   expect(new RegExp(chinese).test('123 ')).toBe(false);
+});
+
+
+test('phone', () => {
+  expect(new RegExp(phoneNumber).test('12390909009')).toBe(true);
+});
+
+test('phone', () => {
+  expect(new RegExp(phoneNumber).test('1239090909')).toBe(false);
+});
+
+
+test('phone', () => {
+  expect(new RegExp(phoneNumber).test('22390909009')).toBe(false);
+});
+
+
+test('phone', () => {
+  expect(new RegExp(phoneNumber).test('1212111110909009')).toBe(false);
 });
 
 
