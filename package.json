@@ -1,6 +1,6 @@
 {
   "name": "popular-regular",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "some common use regular expression",
   "main": "dist/popularRegular.min.js",
   "author": "wone",
@@ -12,7 +12,8 @@
     "rollup-plugin-terser": "^7.0.2"
   },
   "files": [
-    "dist/*.js"
+    "dist/*.js",
+    "types/*.d.ts"
   ],
   "keywords": [
     "regular expression"
