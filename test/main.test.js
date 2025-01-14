@@ -7,7 +7,8 @@ import {
   rightParentheses,
   whiteSpace,
   chinese,
-  phoneNumber
+  phoneNumber,
+  pureAscii
 } from '../src/popularRegular'
 
 
@@ -22,7 +23,6 @@ test('pureFloat', () => {
 test('pureFloat limit strat and end', () => {
   expect(new RegExp(`^(${pureFloat})$`).test('1.123')).toBe(true);
 });
-
 
 test('pureFloat|signFloat (limit strat and end)', () => {
   expect(new RegExp(`^((${pureFloat})|(${signNumber}))$`).test('-123')).toBe(true);
@@ -56,7 +56,6 @@ test('chinese', () => {
   expect(new RegExp(chinese).test('123 ')).toBe(false);
 });
 
-
 test('phone', () => {
   expect(new RegExp(phoneNumber).test('12390909009')).toBe(true);
 });
@@ -65,14 +64,18 @@ test('phone', () => {
   expect(new RegExp(phoneNumber).test('1239090909')).toBe(false);
 });
 
-
 test('phone', () => {
   expect(new RegExp(phoneNumber).test('22390909009')).toBe(false);
 });
 
-
 test('phone', () => {
   expect(new RegExp(phoneNumber).test('1212111110909009')).toBe(false);
 });
+
+test('pureAscii', () => {
+  expect(new RegExp(pureAscii).test('1212111110909009')).toBe(true);
+  expect(new RegExp(pureAscii).test(`sad/.asdl-=349210/`)).toBe(true);
+  expect(new RegExp(pureAscii).test(`打开102.`)).toBe(false);
+})
 
 

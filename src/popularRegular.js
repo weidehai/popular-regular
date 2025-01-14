@@ -7,6 +7,7 @@ const rightParentheses = "\\)";
 const whiteSpace = "\\s";
 const chinese = "[^\\u0000-\\u00FF]"
 const phoneNumber = "^1(\\d){10}$"
+const pureAscii = "^[\\x00-\\x7F]*$"
 
 export {
   pureNumber,
@@ -17,5 +18,6 @@ export {
   rightParentheses,
   whiteSpace,
   chinese,
-  phoneNumber
+  phoneNumber,
+  pureAscii
 };
