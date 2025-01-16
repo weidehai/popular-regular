@@ -8,7 +8,8 @@ import {
   whiteSpace,
   chinese,
   phoneNumber,
-  pureAscii
+  pureAscii,
+  RegTest
 } from '../src/popularRegular'
 
 
@@ -76,6 +77,7 @@ test('pureAscii', () => {
   expect(new RegExp(pureAscii).test('1212111110909009')).toBe(true);
   expect(new RegExp(pureAscii).test(`sad/.asdl-=349210/`)).toBe(true);
   expect(new RegExp(pureAscii).test(`打开102.`)).toBe(false);
+  expect(RegTest(pureAscii, '...')).toBe(true);
 })
 
 

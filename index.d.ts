@@ -9,4 +9,5 @@ declare module 'popular-regular' {
   export const chinese: string;
   export const phoneNumber: string;
   export const pureAscii: string;
+  export const RegTest: (pattern: RegExp | string, input: string) => boolean
 }
